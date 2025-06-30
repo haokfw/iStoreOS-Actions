@@ -27,11 +27,11 @@ rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf package/diy/luci-app-ota
 
 # 科学上网插件
-git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/nikki
-git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 #OTA
 git_sparse_clone main https://github.com/s71557/istoreos-ota luci-app-ota
@@ -55,7 +55,7 @@ sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/shar
 cp -f $GITHUB_WORKSPACE/distfeeds.conf files/etc/opkg/distfeeds.conf
 
 # 更换默认背景
-cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
+#cp -f $GITHUB_WORKSPACE/images/bg1.jpg feeds/third/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # iStoreOS-settings
 git clone --depth=1 -b main https://github.com/s71557/istoreos-settings package/default-settings
